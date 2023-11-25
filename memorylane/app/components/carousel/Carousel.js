@@ -1,9 +1,12 @@
+'use client'
+
 import {Swiper, SwiperSlide} from "swiper/react"
 import {EffectCoverflow} from "swiper";
+import React, { createContext } from 'react';
 
 import "swiper/css"
-import "./styles/css"
-import "swiper/css/effect-cover-flow";
+import "./styles.css"
+import "swiper/css/effect-coverflow";
 
 const slides=[
     "https://i.postimg.cc/Z0ktfskN/peter-broomfield-m3m-ln-R90u-M-unsplash.jpg",
@@ -19,34 +22,25 @@ const slides=[
 
 export const Carousel=()=>{
     return(
-        <Swiper
-        grabCursor
-        centeredSlides
-        slidesPerView="auto"
-        effect="coverflow"
-        loop
-        coverflowEffect={{
-            rotate:50,
-            stretch:0,
-            depth:100,
-            modifier:1,
-            slideShadows:true,
-        }}
-        modules={[EffectCoverflow]}
-        >
-            <div className="swiper-wrapper">
-                {slides.map((slide)=>(
-                    <SwiperSlide
-                    key={slide}
-                    style={{
-                        backgroundImage:`url(${slide})`
-                    }}/>
-                ))}
-
-            </div>
-            <div className="swiper-pagination"></div>
-
-        </Swiper>
+        <div className="carousel carousel-center max-w-md p-4 space-x-4 bg-neutral rounded-box">
+  <div className="carousel-item">
+    <img src="1.png" className="rounded-box" />
+  </div> 
+  <div className="carousel-item">
+    <img src="2.png" className="rounded-box" />
+  </div> 
+  <div className="carousel-item">
+    <img src="3.png" className="rounded-box" />
+  </div> 
+  <div className="carousel-item">
+    <img src="4.png" className="rounded-box" />
+  </div> 
+  <div className="carousel-item">
+    <img src="5.png" className="rounded-box" />
+  </div> 
+  
+</div>
+       
     )
 }
 
