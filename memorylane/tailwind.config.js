@@ -5,6 +5,7 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+
   theme: {
     extend: {
       backgroundImage: {
@@ -12,6 +13,15 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      colors:{
+        green:{
+          900: '#666C49'
+        },
+        white:{
+          100: '#F3ECE3'
+
+        }
+      }
     },
   },
   plugins: [],
