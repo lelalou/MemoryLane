@@ -28,13 +28,13 @@ export default function Home() {
       </div> */}
 
 <div className='px-80 pt-20 absolute top-1/2 transform -translate-y-1/2 text-center flex flex-row'>
-        <div className='mx-12 mb-4'>
+        <div className='mx-12 mb-4 text-black'>
           <button type="button" className='w-40 h-20 border border-amber-100 bg-amber-100 hover:bg-amber-300 rounded-md'>
             Remind
           </button>
         </div>
 
-        <div className='mx-12'>
+        <div className='mx-12 text-black'>
           <Link href="/reminisce">
             <button type="button" className='w-40 h-20 border border-amber-100 bg-amber-100 hover:bg-amber-300 rounded-md'>
               Reminisce
