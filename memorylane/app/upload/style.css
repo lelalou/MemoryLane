@@ -1,0 +1,9 @@
+/* Styles for the background color */
+.bg-353b33 {
+    background-color:#aba187;
+  }
+  
+  /* Styles for the hover state background color */
+  .hover\:bg-353b33-dark:hover {
+    background-color: #2c3129; /* You can adjust this color to your preference */
+  }
