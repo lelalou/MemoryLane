@@ -61,9 +61,53 @@ app.post('/upload', upload.fields([{ name: 'image', maxCount: 1 }, { name: 'vide
 });
 
 
+// Replace the /images/:id endpoint with a /images/byKeyPhrase endpoint
+app.get('/images/byKeyPhrase', async (req, res) => {
+    try {
+        const keyPhrase = req.query.keyPhrase; // Retrieve the key phrase from query parameters
+
+        if (!keyPhrase) {
+            return res.status(400).send('Key phrase is required');
+        }
+
+        // Find the memory with the given key phrase
+        const memory = await Memory.findOne({ keyPhrase: keyPhrase });
+
+        if (!memory || !memory.image) {
+            return res.status(404).send('No memory found with the given key phrase, or image is missing');
+        }
+
+        res.set('Content-Type', memory.imageContentType);
+        res.send(memory.image);
+    } catch (error) {
+        res.status(500).send('Error retrieving image: ' + error.message);
+    }
+});
 
 
-app.get('/images/:id', async (req, res) => {
+app.get('/images/all', async (req, res) => {
+    try {
+        // Find all memories
+        const memories = await Memory.find({});
+
+        // Filter out memories that have images
+        const images = memories.filter(memory => memory.image).map(memory => {
+            return {
+                id: memory._id,
+                image: memory.image,
+                contentType: memory.imageContentType
+            };
+        });
+
+        // Send the array of images
+        res.status(200).json(images);
+    } catch (error) {
+        res.status(500).send('Error retrieving images: ' + error.message);
+    }
+});
+
+
+/*app.get('/images/:id', async (req, res) => {
     try {
         const memory = await Memory.findById(req.params.id);
 
@@ -77,29 +121,7 @@ app.get('/images/:id', async (req, res) => {
         res.status(404).send('Image not found: ' + error.message);
     }
 });
-
-app.get('/images/all', async(req,res)=>{
-    try{
-        const memories = await Memory.find({image:{$exists:true}});
-
-        const imageData = memories.filter(memory => memory.image).map(memory => {
-            return {
-                id: memory._id,
-                image: memory.image,
-                contentType: memory.imageContentType
-            };
-        })
- 
-        res.status(200).json(imageData);
-
-    }catch(err){
-        console.error("error:", err);
-        res.status(500).json({error: "intetnal"})
-}
-}
-
-
-)
+*/
 
 
 // Start Server
