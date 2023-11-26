@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "memorylane-406304",
+  "private_key_id": "7f2d34fdabc882448d8b84bf23cced99e4974733",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEuwIBADANBgkqhkiG9w0BAQEFAASCBKUwggShAgEAAoIBAQC8CixLDZiRHjkI\nwrRSN7msxRAe1HBHjWlMDRTWwuncHOmYwz3DHI3mSeA57E5p/qg/niJaa+yLz5YM\neeYNoXInp1IsRzlMSl+j8osRCU18jGoHbGTTmHmOxIhCUyYkbo4b+36lldbJOFdc\nxgaD9SFxVSZi51UQVdVveTRKICJBXgDMXz6CFIGKz0JK47ZgtQ4cPfqhEvRt5xiZ\nunpNlpjLpAxvY/UL2nsf0ulTxTji5F54P9b7NROrSInzHBEQADBD/X0MZyRjBWqs\nRfJuw5GZupHXw4KesbnClSKaCGZ4gejsyxUEJUyMLjcgJt7aZApdUO242UVjXfBb\nuCm5JXMLAgMBAAECgf9zr86QXkz++xkbyq4l5yLUqGjCjvCFFPszTtkDR+eZBDCz\nS2s0Ht0uUUUiXb/gdkwM171K5Bsj6RLnmhdvS2RwAQENPMSDqz4sH4xvbsm9VqXk\n60sc4zHmJAOwyncs8td7X78LIKSEJ6WX7j0T8jwg/cIgFzK+WhB2BJum/x4UGDKb\nCes0JrN9h1jl8/J2RSR1pAy48LDccRTBNpyAw+Gd+KV8TMD9iLU8nBRkTa5ib6qw\n+oDkOATVNZPOmziVQLiEkjbsSW0LAsr7Ig6IOztOFyN6YkkABo7eR1+sE17XowC/\n+b0ALhYHLVaH8nr7t3FF/HALGMX9RjUa1Iqogx0CgYEA7TJAc9X0SKNxFsHqwCo0\nNFOsaJK2hpW8MQet4gwwt03glJBmVlpDWrisjsGGR5C9LIvo3JcIcv9O/s4hIhEM\nR5yjGAXrtbWRPJohkRbdZjNS8KB+rJ5yMgwa9NBje9hKpSLHPAM+NdvYKrTsqnFB\nmU3GB0PpbJBTRx+1D8Qo390CgYEAyvJR87nT+7iro+7idSHVM56pH7Aavc/TOiV7\nVuNTYHawWQ8G+66vL2dyO6+xahuC8lNQ+PophcTMLahWuQzPqAK2qh08SZHsud4/\n81xOlC3OHxKpLsYKnDPl39kq8UK+bJu56UvNwQRt1aE273HBCd1FelHvVQb6FlUk\n/ygZZAcCgYAo7xksZGoJ9xrXIJQQobfsp9wDF/6j70dQ9tBNSGlH2Qq+2MSwdldV\nWrV81W0FALeE7og7OV1d6y2Iz63sISELYr7KsIrjCviLitXsIhQHRSg1Gp2B0L5I\nYMpuIWBpyQPox722X6Dmzo/ZnuuQ5oa5nDBmpJOuBqI4jgJDPEkJiQKBgD2AxC89\nkK2HYJTUr1JaB3eWTKCqyN/fHJ9RfphtWfYw4e6LbE1XugV+rxLBgt2qKrvvXemm\nPnEom8v2aRm5dTDwaZUSORP+oiQN44mH3tRvMTkfeaAQKmT+IVr+QFJPLNBTPTsj\nWt50zihgq/pSmfK4WPbh38r/y0h7UzP0XgV/AoGBAJqSdO4W7rV1ni/4dgapl4Mf\n0C6Ki37radN9Xf1LXtatoqhKry9nBPuYLSFfe1I/ylazU/LFQK/cXsw3ivIB7FoB\nwcVOqRqKpsB+WVoxH0jQltW5VH0kcKyAYxI2MpLYPJs5Es23/1zgWcAG1Tw++r1S\nIpHs6aIsB21m15gzsYRP\n-----END PRIVATE KEY-----\n",
+  "client_email": "memorylane@memorylane-406304.iam.gserviceaccount.com",
+  "client_id": "102231958970282107993",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/memorylane%40memorylane-406304.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
