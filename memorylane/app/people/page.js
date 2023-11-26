@@ -1,11 +1,40 @@
 'use client'
 
 import React, {Component} from 'react'
+import { useEffect, useState } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import {Carousel} from 'react-responsive-carousel'
+import "./public/images"
 
-export default class NextJsCarousel extends  Component{
-    render(){
+
+
+
+export default function NextJsCarousel() {
+
+    const imageFolder = './public/images'
+    
+    const[images,setImages] = useState([])
+
+    setImages(imagess)
+    // useEffect(() => {
+    //     const fetchImages = async () => {
+    //       try {
+    //         const response = await fetch('http://localhost:3000/people/images/all');
+    //         const imageData = await response.json();
+    //         setImages(imageData);
+    //       } catch (error) {
+    //         console.error('Error fetching images:', error);
+    //       }
+    //     };
+    
+    //     fetchImages();
+    //   }, [])
+
+
+
+
+
+
         return(
             <div> 
               <div className='w-full bg-amber-200 text-white'>
@@ -15,34 +44,34 @@ export default class NextJsCarousel extends  Component{
                 
                 </div> 
               <Carousel> 
-                  <div> 
-                      <img src="/1.png" alt="image1"/> 
-                      <p className="legend">Image 1</p> 
-  
-                  </div> 
-                  <div> 
-                      <img src="/2.png" alt="image2" /> 
-                      <p className="legend">Image 2</p> 
-  
-                  </div> 
-                  <div> 
-                      <img src="/3.png" alt="image3"/> 
-                      <p className="legend">Image 3</p> 
-  
-                  </div> 
-                  <div> 
-                      <img src="/4.png" alt="image4"/> 
-                      <p className="legend">Image 4</p> 
-  
-                  </div> 
-                  <div> 
-                      <img src="/5.png" alt="image5"/> 
-                      <p className="legend">Image 5</p> 
-  
-                  </div> 
+                {images.map((image,index)=>{
+                    <div key={index}>
+                        <img src={`/images/${image}`} alt={`image${index+1}`}/>
+                        <p className='legend'>{`Image ${index+1}`}</p>
+
+                        
+                    </div>
+                })}
               </Carousel> 
             </div>
 
         )
     }
-}
+
+
+// export async function getServerSideProps(){
+//     try{
+//         const response = await fetch('/images/all');
+//         const images = await response.json();
+
+//         return{
+//             props: {images},
+//         }
+//     }catch(error){
+//         console.error("error fetching images", error);
+//         return{
+//             props: {images: []},
+//         };
+//     }
+// }
+

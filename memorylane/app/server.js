@@ -78,6 +78,29 @@ app.get('/images/:id', async (req, res) => {
     }
 });
 
+app.get('/images/all', async(req,res)=>{
+    try{
+        const memories = await Memory.find({image:{$exists:true}});
+
+        const imageData = memories.filter(memory => memory.image).map(memory => {
+            return {
+                id: memory._id,
+                image: memory.image,
+                contentType: memory.imageContentType
+            };
+        })
+ 
+        res.status(200).json(imageData);
+
+    }catch(err){
+        console.error("error:", err);
+        res.status(500).json({error: "intetnal"})
+}
+}
+
+
+)
+
 
 // Start Server
 app.listen(port, () => {

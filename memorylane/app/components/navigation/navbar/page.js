@@ -36,8 +36,8 @@ const Navbar=({toggle})=> {
                 </li>
                 <li>
                   <button type="button" className='w-20 h-20 bg-amber-100 hover:bg-yellow-700'>
-                  <Link href="/plans">
-                        <p className='text-black text-center font-bodoni-moda text-15 font-bold '>plans</p>
+                  <Link href="/upload">
+                        <p className='text-black text-center font-bodoni-moda text-15 font-bold '>upload</p>
                     </Link>
 
                   </button>
