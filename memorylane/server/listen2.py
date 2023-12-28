@@ -10,7 +10,7 @@ client = speech.SpeechClient(credentials=credentialss)
 
 
 #loading the audio fild
-audio_file = 'audio1.wav'
+audio_file = 'Recording (3).wav'
 with io.open(audio_file,'rb') as f:
     content = f.read()
     audio = speech.RecognitionAudio(content=content)
